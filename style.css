@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: 100% 100%;
+}
+
+video {
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+.heading {
+  text-align: center;
+  width: 75%;
+  margin: 0.5% 0;
+  color: #fff;
+}
+
+#card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5%;
+  flex-wrap: wrap; /* Allow cards to wrap to fit in the container */
+  width: 100%;
+  max-width: 1200px; /* Optional: limit max width for better control */
+}
+
+.card {
+  border-radius: 10px;
+  padding: 2.5%;
+  width: 100%;
+  max-width: 300px; /* Optional: control max width of each card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px; /* Adjust spacing between cards */
+  background-color: white; /* Ensure visible background */
+}
+
+.card p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#gold {
+  background-color: #ffd700;
+}
+
+#silver {
+  background-color: #c0c0c0;
+}
+
+#regular {
+  background-color: #c8dce3;
+}
+
+.card.clicked {
+  transform: translateY(-20px);
+}
+
+#select-option {
+  text-align: center;
+  border: 1px solid #442f21;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: #6f4e37be;
+  font-weight: bold;
+  width: 100%;
+  max-width: 300px; /* Adjust width to fit within the screen */
+  margin-bottom: 20px; /* Add spacing below the element */
+}
+
+label {
+  display: block;
+  margin-top: 7.5px;
+  color: rgb(48, 19, 0);
+}
+
+select {
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#btn button {
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  font-weight: bold;
+  background-color: #03b109;
+  color: rgb(48, 19, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#btn button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+#totalAmount {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+#pay {
+  display: none;
+  text-align: center;
+  border: 1px solid #442f21;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: #6f4e37be;
+  font-weight: bold;
+  line-height: 35px;
+  width: 100%;
+  max-width: 300px; /* Adjust width to fit within the screen */
+  margin-top: 20px; /* Add spacing above the element */
+}
+
+#payment button {
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  font-weight: bold;
+  background-color: #03b109;
+  color: rgb(48, 19, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#payment button:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+#cancel button {
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-color: tomato;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#cancel button:hover {
+  background-color: rgb(255, 58, 23);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}

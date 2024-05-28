@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video autoplay loop muted src="./VID_20240107141310.mp4"></video>
+    <h2 class="heading">Elevate Your Coffee Experience: Indulge in a Symphony of Different Types and Tastes with Us.</h2>
+    <div id="card-container">
+        <div id="gold" class="card" onclick="toggleCard(this)">
+            <h2>Gold Member</h2>
+            <p>Special discount for Gold Members</p>
+        </div>
+        <div id="silver" class="card" onclick="toggleCard(this)">
+            <h2>Silver Member</h2>
+            <p>Exclusive offer for Silver Members</p>
+        </div>
+        <div id="regular" class="card" onclick="toggleCard(this)">
+            <h2>Regular Member</h2>
+            <p>Standard discount for Regular Members</p>
+        </div>
+    </div>
+    <div id="select-option">
+        <label for="coffeeType">
+            <h3>Select Coffee Type</h3>
+        </label>
+        <select id="coffeeType" name="coffeeType">
+            <option value="espresso">Espresso</option>
+            <option value="latte">Latte</option>
+            <option value="cappuccino">Cappuccino</option>
+        </select>
+
+        <label for="coffeeSize">
+            <h3>Select Coffee Size</h3>
+        </label>
+        <select id="coffeeSize" name="coffeeSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <label for="coffeeQuantity">
+            <h3>Select Quantity</h3>
+        </label>
+        <select id="coffeeQuantity" name="coffeeQuantity">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <div id="btn"><button type="button" onclick="calculateTotal()" disabled>Total Amount</button></div>
+    </div>
+
+    <div id="pay">
+        <h2 style="text-decoration: underline;">To Pay:</h2>
+        <h3>Price Per Cup:<div id="perCup"></div>
+        </h3>
+        <h3>Discount:<div id="discount"></div>
+        </h3>
+        <h3>Total Discount:<div id="totalDis"></div>
+        </h3>
+        <h3>Total Price:<div id="total"></div>
+        </h3>
+        <div id="payment">
+            <button type="button" onclick="showThankYou()">Pay</button>
+        </div>
+        <div id="cancel">
+            <button type="button" onclick="cancelAndRefresh()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
